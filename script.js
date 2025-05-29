@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
  const form = document.querySelector('form');
  const inputs = document.querySelectorAll('.cats');
 
+//  let catFactsInput = document.getElementsById(num-cats)
+//  let catPhotosInput =document.getElementById(img-cats) 
+
  const messageContainer = document.createElement('p');
  messageContainer.className = 'message';
  document.body.appendChild(messageContainer);
@@ -16,26 +19,21 @@ document.addEventListener('DOMContentLoaded', () => {
  form.addEventListener('submit', (e) => {
    e.preventDefault();
 
-   const numFacts = parseInt(inputs[0].value);
-   const numPhotos = parseInt(inputs[1].value);
+   const numFacts = parseInt(document.getElementById('num-cats').value);
+   const numPhotos = parseInt(document.getElementById('img-cats').value);
 
    factsContainer.innerHTML = '';
    photosContainer.innerHTML = '';
    messageContainer.textContent = '';
 
-   let hasError = false;
 
    if (!(numFacts && numFacts <= 50)) {
      messageContainer.textContent += ' Enter a valid number of facts (1-50). ';
-     hasError = true;
    }
 
    if (!(numPhotos && numPhotos <= 10)) {
      messageContainer.textContent += ' Enter a valid number of photos (1-10). ';
-     hasError = true;
    }
-
-   if (hasError) return;
 
    axios.get(`https://meowfacts.herokuapp.com/?count=${numFacts}`)
      .then(res => {
@@ -56,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
          const img = document.createElement('img');
          img.src = image.url;
          img.alt = 'A cute cat';
-         img.style.width = '150px';
+         img.style.width = '200px';
          img.style.margin = '5px';
          img.style.borderRadius = '8px';
          photosContainer.appendChild(img);
