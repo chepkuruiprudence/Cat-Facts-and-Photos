@@ -1,0 +1,70 @@
+body{
+ font-size: 2rem;
+ margin: 0;
+ padding: 0;
+ flex-wrap: wrap;
+}
+
+html{
+ font-size: 62.5%;
+}
+
+h1{
+ text-transform: capitalize;
+ position: absolute;
+ top: 0;
+ margin: 2rem;
+}
+
+h3{
+ text-transform: capitalize;
+ font-size: 2rem;
+ font-weight: 800;
+ margin: 0;
+
+}
+
+.header-nav{
+ padding: 7rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color: #fad0c4;
+ flex-direction: row;
+}
+
+.form{
+ margin: 5rem;
+ display: flex;
+ align-items: center;
+ gap: 5rem;
+}
+
+.cats{
+ border: 1px solid black;
+ padding: 2rem 9rem;
+ font-size: 2rem;
+ border-radius: 8px;
+ text-decoration: italic;
+}
+
+.submit-btn{
+ font-size: 2rem;
+ border: 2px solid black;
+ padding: 2rem;
+ border-radius: 7px;
+ background-color: #c599b6;
+ text-transform: capitalize;
+ color: #fff;
+}
+
+.message{
+ color: rgb(250, 10, 10);
+ font-weight: bold;
+ margin-top: 10px;
+}
+
+.image-container{
+ margin-top: 20px;
+ display: flex;
+}

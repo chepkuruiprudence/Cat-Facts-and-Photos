@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="header-nav">
+      <h1>the cats app</h1>
+      
+      <div class="form">
+        <form action=""> 
+        <div>
+          <h3>number of cats facts (50 maximum)</h3>
+        <input type="" label="" placeholder="number of cat facts (50)max" class="cats" min="1" max="50" id="num-cats">
+        <button type="submit" value="Submit form" class="submit-btn">submit</button>
+      </div>
+      </form>
+      <div>
+        <h3>number of cats photos (10 max)</h3>
+        <input type="text" label="" placeholder="number of cat photos (10max)" class="cats"   id="img-cats" >
+        <button type="submit" value="Submit form" class="submit-btn">submit</button>
+      </div>
+    </form>
+  </div>
+    <p id="fact-error" class="error-message"></p>
+<ul id="facts-container"></ul>
+
+    </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
