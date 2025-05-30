@@ -1,37 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header class="header-nav">
-      <h1>the cats app</h1>
-    </header>
-      <main>
-      <div class="form">
-        <form action=""> 
-        <div>
-          <h3>number of cats facts (50 maximum)</h3>
-        <input type="" label="" placeholder="number of cat facts (50)max" class="cats" min="1" max="50" id="num-cats">
-        <button type="submit" value="Submit form" class="submit-btn">submit</button>
-      </div>
-      </form>
-      <div>
-        <h3>number of cats photos (10 max)</h3>
-        <input type="text" label="" placeholder="number of cat photos (10max)" class="cats"   id="img-cats" >
-        <button type="submit" value="Submit form" class="submit-btn">submit</button>
-      </div>
-    </form>
-  </div>
-    <p id="fact-error" class="error-message"></p>
-<ul id="facts-container"></ul>
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+ <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <div class="container">
+  <h1>the cats app</h1>
+  <form action="" class="cats-form">
+   <h2>number of cats facts (50 maximum)</h2>
+   <input type="number" placeholder="number of cats facts (50)max" id="num-cats">
+   <button type="button" value="Submit form" class="submit-btn" id="facts-btn">submit</button>
 
-      </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
-    <script src="script.js"></script>
-  </body>
+   <h2>number of cats photos (10 maximum)</h2>
+   <input type="number" placeholder="number of cats photos (10)max" id="img-cats">
+   <button type="button" value="Submit form" class="submit-btn" id="images-btn">submit</button>
+  </form>
+ </div>
+ <div id="spinner" style="display: none;"></div>
+ <div id="facts-display"></div>
+<div id="images-display"></div>
+<div id="results-div"></div>
+
+ <script src="script.js"></script>
+</body>
 </html>

@@ -3,6 +3,8 @@ body{
  margin: 0;
  padding: 0;
  flex-wrap: wrap;
+ position: absolute;
+ overflow-x: hidden;
 }
 
 html{
@@ -11,41 +13,57 @@ html{
 
 h1{
  text-transform: capitalize;
- position: absolute;
  top: 0;
  margin: 2rem;
+ position: absolute;
 }
 
-h3{
+h2{
  text-transform: capitalize;
  font-size: 2rem;
  font-weight: 800;
- margin: 0;
-
+ margin: 2rem;
 }
 
-.header-nav{
- padding: 7rem;
+.cats-form{
+ display: flex;
+}
+
+.container{
+ width: 100vw;
+ padding: 10rem;
  display: flex;
  align-items: center;
  justify-content: center;
  background-color: #fad0c4;
  flex-direction: row;
+ gap: 3rem;
 }
 
-.form{
- margin: 5rem;
- display: flex;
- align-items: center;
- gap: 5rem;
-}
-
-.cats{
+#num-cats{
  border: 1px solid black;
  padding: 2rem 9rem;
  font-size: 2rem;
  border-radius: 8px;
  text-decoration: italic;
+}
+
+#img-cats{
+ border: 1px solid black;
+ padding: 2rem 9rem;
+ font-size: 2rem;
+ border-radius: 8px;
+ text-decoration: italic;
+}
+
+#num-cats::placeholder{
+ color: #c599b6;
+ font-style: oblique;
+}
+
+#img-cats::placeholder{
+ color: #c599b6;
+ font-style: oblique;
 }
 
 .submit-btn{
@@ -58,13 +76,36 @@ h3{
  color: #fff;
 }
 
-.message{
- color: rgb(250, 10, 10);
+#facts-display{
  font-weight: bold;
  margin-top: 10px;
 }
 
-.image-container{
+#images-display{
  margin-top: 20px;
  display: flex;
+ gap: 5px;
+ border-radius: 2px;
+}
+
+#spinner{
+ height:100px;
+ width: 100px;
+ border:10px solid ;
+ border-color: #c599b6 #fad0c4 #c599b6 #fad0c4;
+ border-radius: 50%;
+ transition: 0.3s ease-in-out;
+ animation: rotate 1.5s linear infinite;
+ position: relative;
+ margin-left: 50%;
+ margin-top: 2rem;
+}
+
+@keyframes rotate{
+ from{
+  transform: rotate(0deg);
+ }
+ to{
+  transform: rotate(360deg);
+ }
 }
